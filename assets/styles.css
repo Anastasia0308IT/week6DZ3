@@ -1,28 +1,23 @@
 
 .container {
-    display: grid;
-    height: 100vh;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+display: flex;
+flex-direction: column;
 }
 
 .header {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
 }
-
 .logotip {
     padding-top: 25px;
 }
-
 .href {
 display: grid;
 grid-template-columns: repeat(4,1fr);
 margin-top: 10px;
 }
-
 .search {
     padding-top: 15px;
 }
@@ -88,14 +83,12 @@ form:hover .fa {
     background: #B88E2F;
     color: white;
 }
-
 .img {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-left: 150px;
     margin-top: 40px;
 }
-
 .navclass {
     text-decoration: none;
     font-family: Poppins;
@@ -106,28 +99,25 @@ form:hover .fa {
     text-align: left;
     color: black;
 }
-
 .navclass:hover {
     color: #B88E2F;
     text-decoration: underline;
 }
 
-main {
+.main__block {
     background-image: url(back.png);
-    height: 100vh;
     display: grid;
-    justify-content: right;
     align-items: center;
+    height: 96vh;
     padding-right: 40px;
+    justify-items: right;
 }
-
-.mainblock {
+.main__part {
     background-color: #FFF3E3;
     width: 643px;
     height: 443px;
     border-radius: 10px;
 }    
-
 .arrival {
     font-family: Poppins;
     font-size: 16px;
@@ -137,7 +127,6 @@ main {
     color: #333333;
     padding-left: 40px;
 }
-
 .maintext {
     font-family: Poppins;
     font-size: 52px;
@@ -147,7 +136,6 @@ main {
     color: #B88E2F;
     padding-left: 40px;
 }
-
 .tezis {
     font-family: Poppins;
     font-size: 18px;
@@ -158,53 +146,206 @@ main {
     color: #333333;
     padding-left: 40px;
 }
-
 .buy {
     background: #B88E2F;
     border: none;
     width: 222px;
     height: 74px;
     margin-left: 40px;
-}
-
-.buy:hover {
-background-color: rgb(18, 123, 85);
-}
-
-#now {
     color: #ffff;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 700;
 }
 
+.rooms {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 1fr 20%;
+    justify-items: center;
+    margin-top: 100px;
+}
+.roomText {
+    grid-column: 1/4;
+    justify-self: center;
+    padding-bottom: 30px;
+}
+.browse {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #333333;
+}
+.elit {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #666666;
+}
+.room {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #333333;
+}
+
+.cards-block{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+.our_products {
+    grid-column: 1/5;
+    justify-self: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3A3A3A;
+    padding-bottom: 30px;
+    margin-top: 100px;
+}
+.product_info {
+    width: 285px;
+    height: 145px;
+    top: 301px;
+}
+.first_price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.name {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3A3A3A;
+}
+.description {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #898989;
+}
+.price {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3A3A3A;
+}
+.price1 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #B0B0B0;
+    text-decoration: line-through;
+    align-self: center;
+}
+
+.hover-effect-btn {
+    position: relative;
+    width: 285px;
+    background: #F4F5F7;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 285px;
+    height: 100%;
+    transition: background 0.5s ease;
+}
+.hover-effect-btn:hover .overlay {
+    background: #3A3A3A;
+    width: 285px;
+    height: 100%;
+    opacity: 72%;
+}
+.button_product {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    width: 202px;
+    height: 48px;
+    background-color: white;
+    left: 15%;
+    top: 40%;
+}
+.button_product a {
+    font-family: Poppins;
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:  #B88E2F;
+    z-index: 1; 
+    text-decoration: none;
+    width: 202px;
+    height: 48px;
+}
+.hover-effect-btn:hover .button_product {
+    opacity: 1; 
+}
+
+.button_show {
+    padding-top: 30px;
+    text-align:center
+}
+.show_more {
+    width: 245px;
+    height: 48px;
+    top: 2646px;
+    left: 598px;
+    border: 1px solid #B88E2F;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #B88E2F;
+}
+
+.share_img {
+margin-top: 100px;
+padding-left: 40px;
+}
+
 .footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
+    margin-top: 100px;
+    padding-left: 40px;
 }
-
-.footer4 {
-    grid-column: 4/6;
-}
-
-.footer5 {
-    grid-column: 1/2;
-    grid-row: 2/6;
-}
-
-.footer8 {
-    grid-column: 4/6;
-}
-
-.footer10 {
-    grid-column: 3/6;
-}
-
-.footer12 {
-    grid-column: 3/6;
-}
-
 .footer1 {
     font-family: Poppins;
     font-size: 24px;
@@ -213,7 +354,22 @@ background-color: rgb(18, 123, 85);
     letter-spacing: 0em;
     text-align: left;
 }
-
+.footer4 {
+    grid-column: 4/6;
+}
+.footer5 {
+    grid-column: 1/2;
+    grid-row: 2/6;
+}
+.footer8 {
+    grid-column: 4/6;
+}
+.footer10 {
+    grid-column: 3/6;
+}
+.footer12 {
+    grid-column: 3/6;
+}
 .footer2, .footer3, .footer4, .footer5 {
     font-family: Poppins;
     font-size: 16px;
@@ -237,7 +393,17 @@ background-color: rgb(18, 123, 85);
     border-radius: 5px;
     text-decoration-line: none;
 }
-
 .email {
     border: 1px solid black;
 }
+
+
+.buy:hover, .show_more:hover {
+    background-color:rgba(106, 142, 35, 0.77);
+    color: white;
+    }
+
+    
+
+
+
